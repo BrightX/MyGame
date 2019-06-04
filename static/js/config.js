@@ -153,7 +153,7 @@ var Config = {
 					attack_config: [ 10, 60, 110, 0, 100, 'linear', 'light', 'attacked_light_top', 20 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 1, false ],
 					effect_position: [ 0, 20 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 				},
 				near_light_boxing: {
 					bg: 'RYU1_near_light_boxing',
@@ -164,7 +164,7 @@ var Config = {
 					attack_config: [ 10, 45, 110, 0, 100, 'linear', 'light', 'attacked_light_top', 25 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 1, false ],
 					effect_position: [ 0, 10 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3'  %}"]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3"]
 				},
 				heavy_boxing: {
 					bg: 'RYU1_middle_boxing',
@@ -175,7 +175,7 @@ var Config = {
 					attack_config: [ 10, 60, 120, 0, 150, 'linear', 'heavy', 'attacked_heavy', 120 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 2, false ],
 					effect_position: [ 0, 25 ],
-					sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_boxing.mp3' %}" ]
+					sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_boxing.mp3" ]
 				},
 				near_heavy_boxing: {
 					bg: 'RYU1_near_heavy_boxing',
@@ -187,7 +187,7 @@ var Config = {
 					attack_config: [ 10, 60, 110, 0, 150, 'linear', 'heavy', 'attacked_heavy_top', 130 ],
 					attack_power: [ 2, false ],
 					effect_position: [ 0, 0 ],
-					sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_boxing.mp3' %}" ]
+					sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_boxing.mp3" ]
 				},
 				crouch_light_boxing: {
 					bg: 'RYU1_crouch_light_boxing',
@@ -197,7 +197,7 @@ var Config = {
 					attack_config: [ 10, 60, 150, 0, 150, 'linear', 'light', 'attacked_light_bottom', 30 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 3, false ],
 					effect_position: [ 0, 80 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 				},
 				crouch_heavy_boxing: {
 					bg: 'RYU1_crouch_middle_boxing',
@@ -207,7 +207,7 @@ var Config = {
 					attack_config: [ 10, 60, 150, 0, 150, 'linear', 'heavy', 'attacked_heavy_bottom', 120 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 4, false ],
 					effect_position: [ 0, 80 ],
-					sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_boxing.mp3' %}" ]
+					sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_boxing.mp3" ]
 				},
 				/******************** 腿 *********************/
 				light_kick: {
@@ -220,7 +220,7 @@ var Config = {
 					attack_config: [ 10, 40, 120, 0, 150, 'linear', 'light', 'attacked_light_top', 30 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 1, false ],
 					effect_position: [ 0, 0 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 				},
 				near_light_kick: {
 					bg: 'RYU1_near_light_kick',
@@ -231,7 +231,7 @@ var Config = {
 					attack_config: [ 10, 150, 110, 0, 100, 'linear', 'light', 'attacked_light_bottom', 40 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 1, false ],
 					effect_position: [ 0, 140 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 				},
 				crouch_light_kick: {
 					bg: 'RYU1_crouch_light_kick',
@@ -241,7 +241,7 @@ var Config = {
 					attack_config: [ 10, 100, 210, 0, 150, 'linear', 'light', 'attacked_light_bottom', 40 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 3, false ],
 					effect_position: [ 0, 140 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 				},
 				heavy_kick: {
 					bg: 'RYU1_heavy_kick',
@@ -251,7 +251,7 @@ var Config = {
 					attack_config: [ 10, 120, 160, -100, 200, 'linear', 'heavy', 'attacked_heavy_top', 150 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 2, false ],
 					effect_position: [ 0, -20 ],
-					sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_kick.mp3' %}" ]
+					sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_kick.mp3" ]
 				},
 				near_heavy_kick: {
 					bg: 'RYU1_near_heavy_kick',
@@ -263,7 +263,7 @@ var Config = {
 					attack_config: [ 10, 90, 110, 0, 150, 'linear', 'heavy', 'attacked_heavy_top', 160 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 2, false ],
 					effect_position: [ 0, -20 ],
-					sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_kick.mp3' %}" ]
+					sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_kick.mp3" ]
 				},
 				crouch_heavy_kick: {
 					bg: 'RYU1_crouch_heavy_kick',
@@ -273,7 +273,7 @@ var Config = {
 					attack_config: [ 10, 50, 230, 0, 150, 'linear', 'heavy', 'crouch_kick_attacked_fall', 130 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 4, false ],
 					effect_position: [ 0, 140 ],
-					sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_kick.mp3' %}" ]
+					sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_kick.mp3" ]
 				},
 				/******************** 特殊技能 *********************/
 				jump_light_impact_boxing: {
@@ -285,8 +285,8 @@ var Config = {
 					attack_config: [ 150, 130, 0, -120, 100, 'linear', 'heavy', 'heavy_attacked_fall_down', 150 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 9, true ],
 					effect_position: [ 70, -20 ],
-					sound: [ '', "{% static 'sound/hit_heavy_boxing.mp3' %}" ],
-					specialSound: "{% static 'sound/impact_boxing.mp3' %}",
+					sound: [ '', "sound/hit_heavy_boxing.mp3" ],
+					specialSound: "sound/impact_boxing.mp3",
 					defenseBlood: 30,
 				},
 				after_jump_light_impact_boxing: {
@@ -305,8 +305,8 @@ var Config = {
 					attack_config: [ 150, 130, 0, -180, 200, 'linear', 'heavy', 'heavy_attacked_fall_down', 220 ],
 					attack_power: [ 10, true ],
 					effect_position: [ 70, -70 ],
-					sound: [ '', "{% static 'sound/hit_heavy_boxing.mp3' %}" ],
-					specialSound: "{% static 'sound/impact_boxing.mp3' %}",
+					sound: [ '', "sound/hit_heavy_boxing.mp3" ],
+					specialSound: "sound/impact_boxing.mp3",
 					defenseBlood: 50,
 				},
 				after_jump_heavy_impact_boxing: {
@@ -321,7 +321,7 @@ var Config = {
 					framesNum: 3,
 					easing: [ 0, -20, 3, 'strongEaseOut' ],
 					attack_type: 0,
-					specialSound: "{% static 'sound/whirl_kick.mp3' %}"
+					specialSound: "sound/whirl_kick.mp3"
 				},
 				after_jump_whirl_kick: {
 					bg: 'RYU1_after_whirl_kick',
@@ -337,7 +337,7 @@ var Config = {
 					attack_config: [ 50, 120, 370, 0, 150, 'linear', 'heavy', 'heavy_attacked_fall_down', 180 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 8, false ],
 					effect_position: [ 70, -30 ],
-					sound: [ '', "{% static 'sound/hit_heavy_kick.mp3' %}" ],
+					sound: [ '', "sound/hit_heavy_kick.mp3" ],
 					defenseBlood: 5
 				},
 				light_wave_boxing: {
@@ -346,7 +346,7 @@ var Config = {
 					repeat: [ 1, 1, 1, 10 ],
 					easing: [ 0, 0, 3, 'easeIn' ],
 					attack_type: 2,
-					specialSound: "{% static 'sound/wave_boxing.mp3' %}"
+					specialSound: "sound/wave_boxing.mp3"
 				},
 				heavy_wave_boxing: {
 					bg: 'RYU1_wave_boxing',
@@ -354,7 +354,7 @@ var Config = {
 					repeat: [ 1, 1, 1, 15 ],
 					easing: [ 0, 0, 3, 'easeIn' ],
 					attack_type: 2,
-					specialSound: "{% static 'sound/wave_boxing.mp3' %}"
+					specialSound: "sound/wave_boxing.mp3"
 				},
 				light_wave: {
 					bg: 'transverseWave',
@@ -542,7 +542,7 @@ var Config = {
 						afterFrame: 1,  //完成之后停留在之前动作的倒数第几针.
 						attack_power: [ 5, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+						sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 					},
 					jump_heavy_boxing: {
 						bg: 'RYU1_jump_middle_boxing',
@@ -553,7 +553,7 @@ var Config = {
 						afterFrame: 1 ,
 						attack_power: [ 7, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_boxing.mp3' %}" ]
+						sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_boxing.mp3" ]
 					},
 					jump_light_kick: {
 						bg: 'RYU1_jump_light_kick',
@@ -564,7 +564,7 @@ var Config = {
 						afterFrame: 3,   //完成之后停留在之前动作的倒数第几针.
 						attack_power: [ 5, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+						sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 					},
 					jump_heavy_kick: {
 						bg: 'RYU1_jump_heavy_kick',
@@ -575,7 +575,7 @@ var Config = {
 						afterFrame: 1,   //完成之后停留在之前动作的倒数第几针.
 						attack_power: [ 7, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_kick.mp3' %}" ]
+						sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_kick.mp3" ]
 					},
 					jump_forward_light_boxing: {
 						bg: 'RYU1_jumpMoved_light_kick',
@@ -585,7 +585,7 @@ var Config = {
 						attack_config: [ 150, 100, 40, 0, 'heavy', 'attacked_light_top', 30 ],
 						attack_power: [ 5, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+						sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 					},
 					jump_back_light_boxing: {
 						bg: 'RYU1_jumpMoved_light_kick',
@@ -595,7 +595,7 @@ var Config = {
 						attack_config: [ 150, 100, 40, 0, 'heavy', 'attacked_light_top', 30 ],
 						attack_power: [ 5, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+						sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 					},
 					jump_forward_heavy_boxing: {
 						bg: 'RYU1_jump_middle_boxing',
@@ -605,7 +605,7 @@ var Config = {
 						attack_config: [ 150, 100, 50, 0, 'heavy', 'attacked_heavy_top', 100 ],
 						attack_power: [ 6, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_boxing.mp3' %}" ]
+						sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_boxing.mp3" ]
 					},
 					jump_back_heavy_boxing: {
 						bg: 'RYU1_jump_middle_boxing',
@@ -615,7 +615,7 @@ var Config = {
 						attack_config: [ 150, 100, 50, 0, 'heavy', 'attacked_heavy_top', 100 ],
 						attack_power: [ 6, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_boxing.mp3' %}" ]
+						sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_boxing.mp3" ]
 					},
 					jump_forward_light_kick: {
 						bg: 'RYU1_jumpMoved_light_kick',
@@ -625,7 +625,7 @@ var Config = {
 						attack_config: [ 150, 100, 40, 0, 'heavy', 'attacked_light_top', 40 ],
 						attack_power: [ 5, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+						sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 					},
 					jump_back_light_kick: {
 						bg: 'RYU1_jumpMoved_light_kick',
@@ -635,7 +635,7 @@ var Config = {
 						attack_config: [ 150, 100, 40, 0, 'heavy', 'attacked_light_top', 40 ],
 						attack_power: [ 5, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+						sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 					},
 					jump_forward_heavy_kick: {
 						bg: 'RYU1_jumpMoved_middle_kick',
@@ -645,7 +645,7 @@ var Config = {
 						attack_config: [ 150, 120, 50, 0, 'heavy', 'attacked_heavy_top', 130 ],
 						attack_power: [ 6, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_kick.mp3' %}" ]
+						sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_kick.mp3" ]
 					},
 					jump_back_heavy_kick: {
 						bg: 'RYU1_jumpMoved_middle_kick',
@@ -655,7 +655,7 @@ var Config = {
 						attack_config: [ 150, 120, 50, 0, 'heavy', 'attacked_heavy_top', 130 ],
 						attack_power: [ 6, false ],
 						effect_position: [ 0, 10 ],
-						sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_kick.mp3' %}" ]
+						sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_kick.mp3" ]
 					},
 				}
 			},
@@ -861,7 +861,7 @@ var Config = {
 					attack_config: [ 10, 60, 110, 0, 100, 'linear', 'light', 'attacked_light_top', 20 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 1, false ],
 					effect_position: [ 0, 20 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 				},
 				near_light_boxing: {
 					bg: 'RYU2_near_light_boxing',
@@ -872,7 +872,7 @@ var Config = {
 					attack_config: [ 10, 45, 110, 0, 100, 'linear', 'light', 'attacked_light_top', 25 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 1, false ],
 					effect_position: [ 0, 10 ],
-					sound: [ "{% static 'sound/light_boxing.mp3' %}", "{% static 'sound/hit_light.mp3' %}" ]
+					sound: [ "sound/light_boxing.mp3", "sound/hit_light.mp3" ]
 				},
 				heavy_boxing: {
 					bg: 'RYU2_middle_boxing',
@@ -883,7 +883,7 @@ var Config = {
 					attack_config: [ 10, 60, 120, 0, 150, 'linear', 'heavy', 'attacked_heavy', 120 ],  //偏移x, 偏移y, left, top, timer, easing
 					attack_power: [ 2, false ],
 					effect_position: [ 0, 25 ],
-					sound: [ "{% static 'sound/heavy_boxing.mp3' %}", "{% static 'sound/hit_heavy_boxing.mp3' %}" ]
+					sound: [ "sound/heavy_boxing.mp3", "sound/hit_heavy_boxing.mp3" ]
 				},
 				near_heavy_boxing: {
 					bg: 'RYU2_near_heavy_boxing',
