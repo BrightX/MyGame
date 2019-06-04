@@ -4,18 +4,18 @@ var Ai = function(){
 
 	enemy.bloodBar.event.listen( 'drain', function(){
 		timer.stop();
-	})
+	});
 
 	var random = function( num ){
 		return Math.random() * num | 0;
-	}
+	};
 
 
 	var responsefn = function( distance ){
 
 		var state = enemy.state, enemy_statusManage = enemy.statusManage, attack_type = enemy_statusManage.get().attack_type, response;
 
-		var invincible = enemy_statusManage.get().invincible
+		var invincible = enemy_statusManage.get().invincible;
 
 		//console.log( 'invincible= ' + invincible )
 
@@ -37,10 +37,10 @@ var Ai = function(){
 		
 		if ( state === 'jump_whirl_kick' || state === 'light_jump_whirl_kick' ){
 			if ( distance === 'near' || distance === 'middle' ){
-				return response	= {
+				return {
 					correct: [ 'jump_heavy_impact_boxing' ],
 					wrong: [ 'force_wait', 'force_wait' ]	
-				}	
+				}
 			}
 			return response	= {
 				correct: [  'crouch' ],
@@ -149,7 +149,7 @@ var Ai = function(){
 
 		else{
 			if ( enemy.waveBoxing.firing ){
-				return response = {
+				return {
 					correct: [ 'light_wave_boxing' ],
 					wrong: [ 'force_wait', 'force_wait' ]
 				}
@@ -167,7 +167,7 @@ var Ai = function(){
 		
 
 
-	}
+	};
 	
 	
 
@@ -232,7 +232,7 @@ var Ai = function(){
 
 		//console.log( distance );
 		
-	}
+	};
 	
 	timer = Timer.add( framefn );
 	
@@ -241,11 +241,11 @@ var Ai = function(){
 
 	var start = function(){
 		timer.start();
-	}
+	};
 
 	var stop = function(){
 		timer.stop();	
-	}
+	};
 	
 	return {
 		start: start,
@@ -253,4 +253,4 @@ var Ai = function(){
 		
 	}
 	
-}
+};
