@@ -679,7 +679,7 @@ var Interfaces = {
 
 			var mirror = function( direction ){
 				_move = direction === 1 ? keyMap.move : keyMap.move_mirror;
-			}
+			};
 
 			var start = function(){
 				lock = false;
@@ -772,12 +772,12 @@ var Interfaces = {
 		var _translate = function(){
 			window.map.translate( Map.width, 0 );
 			window.map.scale( -1, 1 );
-		}
+		};
 
 		var framefn = function(){
 			if ( count++ % frameMmultiple !== 0 ) {  //未到达重绘的帧, 重绘保持之前的状态.
 				currFrame = currFrame - 1;
-			};
+			}
 			if ( master && master.direction === -1 ){
 				_translate();
 				window.map.drawImage( imgObj, currFrame * width, 0, width, height, Map.width - left - master.width * 2, top, width * spiritZoom, height * spiritZoom );	
@@ -789,7 +789,7 @@ var Interfaces = {
 			if ( currFrame >= num ){
 				timer.stop();
 			}
-		}
+		};
 
 		timer = Timer.add( framefn );
 
@@ -803,7 +803,7 @@ var Interfaces = {
 			width = imgObj.width / num;
 			height = { 'light': 19, 'heavy': 31, 'defense': 32, 'transverseWaveDisappear': 28 }[ type ] || 19;
 			timer.start();
-		}
+		};
 
 		
 		return {
@@ -821,15 +821,15 @@ var Interfaces = {
 			if ( !src ) return;
 			audio.src = src;
 			audio.play();
-		}
+		};
 
 		var pause = function(){
 			audio.pause();	
-		}
+		};
 		
 		var loop = function(){
 			audio.loop = true;	
-		}
+		};
 		
 		return {
 			play: play,
@@ -839,5 +839,5 @@ var Interfaces = {
 
 	}
 
-}
+};
 
