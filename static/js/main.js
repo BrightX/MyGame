@@ -56,9 +56,7 @@ var Block = Class.create( function( top, left, width, height ){
 				return left;
 			}
 
-		})
-
-
+		});
 
 	var Spirit = Block.subClass( function( config ){
 			this.config = config;
@@ -805,12 +803,12 @@ var WaveBoxing = Fighter.subClass( function( master ){
 						
 
 	
-					})
+					});
 
 					this.frames.event.listen( 'framesDone', function(){
 						self.frames.loop();
 						self.animate.loop();
-					})
+					});
 
 					return this;
 				},
@@ -913,7 +911,7 @@ var WaveBoxing = Fighter.subClass( function( master ){
 	
 		 } 
 	
-)
+);
 
 WaveBoxing.interface( 'SpiritFrames', Interfaces.SpiritFrames );
 

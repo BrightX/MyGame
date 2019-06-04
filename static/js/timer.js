@@ -4,8 +4,7 @@
 		
 		var getSlow = function(){
 			return Config.fps * slowTimer;	
-		}
-
+		};
 
 		var start = function(){
 			if ( t ) return;
@@ -29,8 +28,7 @@
 				}
 			
 			}, Config.fps * slowTimer );
-		}
-
+		};
 
 		var clean = function(){
 			for ( ; curr >= 0; curr-- ){
@@ -38,19 +36,16 @@
 					timers.splice( i, 1 );
 				}
 			}
-		}
-
+		};
 
 		var push = function( fn ){
 			timers[ timers.length ] = fn;
 			return fn;
-		}
-
+		};
 
 		var unshift = function( fn ){
 			return prepareTimer.unshift( fn );  //保持同步, 不然可能会出现A添加进了timer， 而B没有. 好基友永远不分开.
-		}
-
+		};
 
 		var checkZindex = function( fn ){
 			var j, k, oldFn;
@@ -66,24 +61,21 @@
 				timers[ j ] = oldFn;
 				timers[ k ] = fn;	
 			}
-		}
-
+		};
 
 		var stop = function(){
 			clean();
 			clearInterval( t );
 			t = null;
-		}
-
+		};
 
 		var empty = function(){
 			timers.length = 0;
 			//stop();
-		}
-
+		};
 
 		var slow = function( timer ){
-			stop()
+			stop();
 
 			slowTimer = 3;
 			start();
@@ -92,14 +84,12 @@
 				slowTimer = 1;
 				start();
 			}, timer )
-		}
-
+		};
 
 		var normal = function(){
 			slowTimer = 1;
-		}
+		};
 
-		
 	var add = function( fn ){
 		
 		fn.state = 'normal';
@@ -114,21 +104,18 @@
 				fn.state = 'add';	
 			}
 	
-		}
-
+		};
 
 		var stop = function(){
 			fn.state = 'stop';
-		}
-
+		};
 
 		return {
 			start: start,
 			stop: stop
 		}
 	
-	}
-
+	};
 
 		return {
 			add: add,
@@ -141,6 +128,4 @@
 			normal: normal,
 			checkZindex: checkZindex
 		}
-
-	}()
-
+	}();

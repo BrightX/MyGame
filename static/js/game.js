@@ -66,33 +66,49 @@ var Game = function(){
 		Util.loadImg( function(){	
 			
 			Util.loadAudio( function(){
-			
 				gameStart();
+				var div_1 = document.createElement( 'div' );
+				div_1.style.width = '210px';
+				div_1.style.height = '550px';
+				div_1.style.top = '50px';
+				div_1.style.left = '-210px';
+				div_1.style.position = 'absolute';
+				div_1.style.zIndex = 9999;
+				div_1.innerHTML = '主机:<br>' +
+					'* 移动:<br> W: 上, D: 前, A: 后, S：下 <br>' +
+					'* 攻击: <br>J: 轻拳, K: 重拳, U: 轻腿, I: 重腿<br>' +
+					'* 技能: <br>下→前→拳: 波动拳, <br>下→后→腿：旋风腿, <br>前→下→前→拳：升龙拳<br>';
+				document.body.appendChild( div_1 );
 
-
-				var div = document.createElement( 'div' );
-				div.style.width = '720px';
-				div.style.height = '32px';
-				div.style.top = '550px';
-				div.style.left = '96px';
-				div.style.position = 'absolute';
-				div.style.zIndex = 9999;
-				div.innerHTML = '作者blog: <a href="http://www.alloyteam.com/author/svenzeng/" target="_blank">http://www.alloyteam.com/author/svenzeng/</a>';
-				document.body.appendChild( div );
-	
+				var div_2 = document.createElement( 'div' );
+				div_2.style.width = '210px';
+				div_2.style.height = '550px';
+				div_2.style.top = '50px';
+				div_2.style.left = '930px';
+				div_2.style.position = 'absolute';
+				div_2.style.zIndex = 9999;
+				div_2.innerHTML =
+					'副机（小键盘）:</br>' +
+					'* 移动: <br>↑: 上, ←: 前, →: 后, ↓：下 <br>' +
+					'* 攻击: <br>1: 轻拳, 2: 重拳, 4: 轻腿, 5: 重腿<br>' +
+					'* 技能: <br>下→前→拳: 波动拳,<br> 下→后→腿：旋风腿,<br> 前→下→前→拳：升龙拳<br>';
+				document.body.appendChild( div_2 );
+				var div_3 = document.createElement( 'div' );
+				div_3.style.width = '720px';
+				div_3.style.height = '32px';
+				div_3.style.top = '550px';
+				div_3.style.left = '96px';
+				div_3.style.position = 'absolute';
+				div_3.style.zIndex = 9999;
+				div_3.innerHTML = '按F2暂停游戏, 1键大战电脑ai, 2键双人对打。<br>';
+				document.body.appendChild( div_3 );
 			})
-		
 		});
-
 	};
-
 	return {
 		init: init
 	}
-
-
 }();
-
 var gameStart = function(){
 		document.body.removeChild( div );
 		document.body.removeChild( div2 );

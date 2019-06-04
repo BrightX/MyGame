@@ -9,15 +9,15 @@ var Event = function(){
 			obj[ key ].clean();
 		}
 		obj[ key ].add( eventfn );		
-	}
+	};
 
 	var removeListen = function( key ){
 		obj[ key ] && obj[ key ].clean();
-	}
+	};
 
 	var fireEvent = function( key ){
 		obj[ key ] && obj[ key ].fireEach.apply( this, Array.prototype.slice.call( arguments, 1 ) );
-	}
+	};
 	
 	return {
 		listen: listen,
@@ -25,12 +25,7 @@ var Event = function(){
 		fireEvent: fireEvent	
 	}
 
-	
-}
-
-
-
-
+};
 
 var Interfaces = {
 	
@@ -46,7 +41,7 @@ var Interfaces = {
 			//if ( type > _type || type === 0 ){
 				//return unlock( type );
 		//	}
-		}
+		};
 
 		var unlock = function( _type ){
 			//if ( !locked() ) return;
@@ -54,15 +49,15 @@ var Interfaces = {
 			//timer = setTimeout( function(){
 				//	_type = type || 0;
 			//}, lock_delay || 0 );
-		}
+		};
 
 		var locked = function(){
 			return lock_level > 0;
-		}
+		};
 
 		var getLevel = function(){
 			return lock_level;
-		}
+		};
 
 		return {
 			lock: lock,
@@ -82,37 +77,37 @@ var Interfaces = {
 			}
 			stack.push( obj );
 			return stack;
-		}
+		};
 
 		var unshift = function( obj ){
 			stack.unshift( obj );	
-		}
+		};
 	
 		var dequeue = function(){
 			return stack.length && stack.shift();
-		}
+		};
 
 		var clean = function(){
 			return stack.length = 0;	
-		}
+		};
 		
 		var isEmpty = function(){
 			return stack.length === 0;	
-		}
+		};
 
 		var fireEach = function(){
 			for ( var i = 0, c; c = stack[i++]; ){
 				c.apply( this, Array.prototype.slice.call( arguments, 0 ) );
 			}
-		}
+		};
 
 		var get = function(){
 			return stack;	
-		}
+		};
 
 		var last = function(){
 			return stack.length && 	stack[ stack.length - 1 ];
-		}
+		};
 		
 		return {
 			add: add,
@@ -145,26 +140,26 @@ var Interfaces = {
 				enemy_distance_type = 'furthest';
 			}
 			return enemy_distance_type;
-		}
+		};
 
 		var set_attack_type = function( type ){
 			if ( type === 2 ){
 				attack_light = self.state.indexOf( 'light' ) > -1;	
 			}
 			return attack_type = [ 'wait', 'defense', 'attack', 'beat', 'fall_down' ][ type || 0 ];
-		}
+		};
 
 		var setInvincible = function( time ){
 			custom_invincible = true;
 			setTimeout( function(){
 				custom_invincible = false;
 			}, time )
-		}
+		};
 		
 		var set_attack_power = function( power ){
 			attack_power = power[ 0 ] || 0;
 			invincible = power[ 1 ] || false;
-		}
+		};
 
 		var get = function(){
 			return {
@@ -175,24 +170,24 @@ var Interfaces = {
 				attack_power: attack_power,
 				invincible: invincible || custom_invincible
 			}
-		}
+		};
 
 		
 		var isJump = function(){
 			return self.state && self.state.indexOf( 'jump' ) > -1;	
-		}
+		};
 		
 		var isStand = function(){
 			return self.state && self.state.indexOf( 'jump' ) < 0 && self.state.indexOf( 'crouch' ) < 0;	
-		}
+		};
 		
 		var isCrouch = function(){
 			return self.state && self.state.indexOf( 'crouch' ) > -1;		
-		}
+		};
 		
 		var isCustom = function(){
 			return self.state && self.state.indexOf( 'custom' )	> -1;	
-		}
+		};
 	
 	
 		return {
@@ -219,7 +214,7 @@ var Interfaces = {
 			if ( direction === 1 ) return;
 			window.map.translate( Map.width, 0 );
 			window.map.scale( -1, 1 );
-		}
+		};
 
 		var moveto = function( t, l, w, de ){
 			top = t;
@@ -233,7 +228,7 @@ var Interfaces = {
 
 
 			_translate();
-		}
+		};
 
 		return {
 			moveto: moveto
@@ -253,16 +248,16 @@ var Interfaces = {
 
 		var framesDone = function( fn ){
 			framesDoneQueue.add( fn );
-		}
+		};
 
 		var moveto = function( left, top ){
 			f_left = self.left = left;
 			f_top = self.top = top;
-		}
+		};
 
 		var now = function(){
 			return +new Date;
-		}
+		};
 
 		var move = function(){
 			
@@ -304,29 +299,29 @@ var Interfaces = {
 				event.fireEvent( 'framesDone' );	
 			}
 
-		}
+		};
 
 		var lock = function( dir ){
 			locked = dir;
-		}
+		};
 
 		var unlock = function(){
 			locked = false;
-		}
+		};
 
 		var push = function( d ){
 			self.left = self.crossBorder( self.left - d * direction );
-		}
+		};
 	
 
 		var stagePush = function( dis ){
 			stageCount++;
 			stageDistance = dis;			
-		}
+		};
 
 		var stopStagePush = function(){
 			stageCount = 0;	
-		}
+		};
 		
 
 		var start = function( left, top, t, fn ){
@@ -343,23 +338,23 @@ var Interfaces = {
 			if ( fn === 'sineaseOut' || fn === 'sineaseIn'  ){
 				leftEasingfn = Config.easing[ 'linear' ];
 			}
-		}
+		};
 		
 		var getStageCount = function(){
 			return stageCount;	
-		}
+		};
 
 		var correct = function(){
 			self.top = self.f_top;
-		}
+		};
 
 		var loop = function(){
 			arg && start.apply( self, arg );
-		}
+		};
 
 		var mirror = function( de ){
 			direction = de || direction;	
-		}
+		};
 
 		return {
 			moveto: moveto,
@@ -406,7 +401,7 @@ var Interfaces = {
 
 				_translate();
 
-		}
+		};
 
 		var combo_attack = function(){
 
@@ -430,7 +425,7 @@ var Interfaces = {
 				}
 				return true;
 
-			}
+			};
 
 			var getcombo_attack = function(){
 				if ( _combo_attack.currFrame >= _combo_attack.framesNum ){
@@ -443,16 +438,16 @@ var Interfaces = {
 				}
 				_combo_attack.currFrame++;
 				return _combo_attack;
-			}
+			};
 
 			var stop = function(){
 				_combo_attack = {};
 				locked = false;
-			}
+			};
 			
 			var done = function( fn ){
 				donefn = fn;
-			}
+			};
 
 			return {
 				start: start,
@@ -461,13 +456,13 @@ var Interfaces = {
 				done: done
 			}
 
-		}()
+		}();
 
 		var _translate = function(){
 			if ( direaction === 1 ) return;
 			window.map.translate( Map.width, 0 );
 			window.map.scale( -1, 1 );
-		}
+		};
 
 		var repeatFrames = function(){
 			if ( !repeat ) return;
@@ -475,7 +470,7 @@ var Interfaces = {
 			for ( var i = 0, l = repeat.length; i < l; i++ ){
 				framesNum += repeat[ i ];
 			}
-		}
+		};
 
 		var getReallyFrame = function( frame, re ){
 			if ( !re ) return frame;
@@ -489,13 +484,13 @@ var Interfaces = {
 			}
 		
 			return frame;
-		}
+		};
 
 		
 		var checkZindex = function(){
 			framefn.zIndex = +new Date;
 			Timer.checkZindex( framefn );
-		}
+		};
 
 
 		var framefn = function(){
@@ -505,7 +500,7 @@ var Interfaces = {
 			/******************************** 改变自身帧 *********************************/
 			if ( count++ % frameMmultiple != 0 ) {  //未到达重绘的帧, 重绘保持之前的状态.
 				return draw( currFrame - 1 );
-			};
+			}
 
 			if ( currFrame >= framesNum ){
 				draw();
@@ -518,7 +513,7 @@ var Interfaces = {
 			currFrame++;
 			event.fireEvent( 'frameDone' );
 
-		}
+		};
 		
 		framefn.zIndex = +new Date;
 		
@@ -536,22 +531,22 @@ var Interfaces = {
 			position = po || 0;
 			direaction = de || 1;
 			repeatFrames();
-		}
+		};
 
 		var start = function( bg, fNum, mul, re, po, de ){
 			arg = Array.prototype.slice.call( arguments, 0 );
 			event.fireEvent( 'framesStart' );
 			setParam( bg, fNum, mul, re, po, de );
 			timer.start();
-		}
+		};
 
 		var loop = function(){
 			start.apply( self, arg );
-		}
+		};
 
 		var stop = function(){
 			timer.stop();
-		}
+		};
 
 		return {
 			start: start,
@@ -575,7 +570,7 @@ var Interfaces = {
 			}else{
 				element.attachEvent( 'on' + e, fn );
 			}
-		}
+		};
 
 		return function( keyMap ){
 
@@ -624,7 +619,7 @@ var Interfaces = {
 		/*********************** 动作为移动, 添加到队列 ************************/
 				_map[ key ] = true;
 
-			})
+			});
 
 			addEventListener( document, 'keyup', function( ev ){
 				
@@ -635,7 +630,7 @@ var Interfaces = {
 				var attackKey = _attack.normal[ key ];
 				_attack_map[ attackKey ] = false;
 				_map[ key ] = false;
-			})
+			});
 
 			var getKeyMap = function(){
 				var key = '';
@@ -643,14 +638,14 @@ var Interfaces = {
 					_map[i] && ( key += i );
 				}
 				return key;
-			}
+			};
 
 			var getKeyMapFirst = function(){
 				for ( var i in _map ){
 					return _map[i] && i;
 				}
 				return '';
-			}
+			};
 
 			var framefn = function(){   //给move用的
 				
@@ -668,7 +663,7 @@ var Interfaces = {
 					count = 0;
 					keyQueue.clean();
 				}
-			}
+			};
 
 			var timer = Timer.add( framefn );
 
@@ -676,11 +671,11 @@ var Interfaces = {
 
 			var match = function( fn ){
 				_keydown = fn;
-			}
+			};
 
 			var unmatch = function( fn ){
 				_keyup = fn;
-			}
+			};
 
 			var mirror = function( direction ){
 				_move = direction === 1 ? keyMap.move : keyMap.move_mirror;
@@ -688,13 +683,13 @@ var Interfaces = {
 
 			var start = function(){
 				lock = false;
-			}
+			};
 			
 			var stop = function(){
 			    _map = {};
 				keyQueue.clean();
 				lock = true;
-			}
+			};
 			
 			return {
 				event: event,
@@ -709,11 +704,6 @@ var Interfaces = {
 		
 		
 	}(),
-	
-	
-
-
-
 
 	Collision: function(){
 
@@ -756,11 +746,11 @@ var Interfaces = {
 				
 				//return unqueue.fireEach.call( self );					
 			
-			}
+			};
 
 			var getAll = function(){
 				return stack;
-			}
+			};
 
 
 			return {
