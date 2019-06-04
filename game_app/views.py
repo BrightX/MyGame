@@ -17,7 +17,6 @@ def snake(request):
 
 def street_fighter(request):
     return render(request, "StreetFighter.html")
-    # return render(request, "../static/StreetFighter_01.html")
 
 
 def minesweeper(request):
