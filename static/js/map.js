@@ -27,28 +27,28 @@ var Map = function(){
 			audio.loop();
 	
 			audio.play( 'sound/china.mp3' );
-		}, 100 )
+		}, 100 );
 
 		ctx.stage = stage;
 		
 		return ctx;
-	}
+	};
 
 
 	var clear = function(){
 		ctx.clearRect( 0, 0, canvas.width, canvas.height );
-	}
+	};
 
 
 	var frames = function(){
 		clear();
-	}
+	};
 
 
 
 	var getMaxX = function(){
 		return canvas.width;	
-	}
+	};
 
 
 	return {
@@ -58,7 +58,7 @@ var Map = function(){
 
 
 
-}()
+}();
 
 
 
@@ -109,11 +109,11 @@ var Map = function(){
 
 			var start = function(){
 				old_scrollLeft = bg.scrollLeft;
-			}
+			};
 
 			var stop = function(){
 				scrolling = false;
-			}
+			};
 
 			var scroll = function( dir ){
 				dis = dir === 'left' ? -3 : 3;
@@ -124,24 +124,22 @@ var Map = function(){
 				}else{
 					stop();
 				}
-			}
+			};
 
 			var pushEnemy = function(){
 				if ( old_scrollLeft === bg.scrollLeft || !scrolling ){
 					return;
 				}	
 				self.enemy.left = self.enemy.left - dis;	
-			}
+			};
 
 			var pushEnemy2 = function(){
 				//self.enemy.left = self.enemy.left + ( old_scrollLeft - bg.scrollLeft );
-			}
-
+			};
 
 			var isScrolling = function(){
 				return scrolling
-			}
-
+			};
 
 			return {
 				start: start,
@@ -153,7 +151,4 @@ var Map = function(){
 			}
 					
 		}
-
-		
-	}
-
+	};

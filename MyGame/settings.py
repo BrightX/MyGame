@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^9u6=$6cv6)--%n3(8d)1^=yzv-8vfi-g9)1ucrd$ipl#3#iqt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1']
 ALLOWED_HOSTS = ['*']
@@ -128,10 +128,12 @@ USE_TZ = True
 # 设置静态文件目录和名称
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
 # 这个是设置静态文件夹目录的路径
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 # 设置文件上传路径，图片上传、文件上传都会存放在此目录里
 MEDIA_URL = '/media/'

@@ -21,6 +21,7 @@ from game_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('game/', include('game_app.urls')),
+    path('StreetFighter/', include('game_app.sf_url')),
     path('', views.index),
 
     # favicon.ico

@@ -14,7 +14,7 @@ var Game = function(){
 
 
 
-		var wrap = document.body.appendChild( document.createElement( "div" ) )
+		var wrap = document.body.appendChild( document.createElement( "div" ) );
 
 		document.body.appendChild( loading );
 		
@@ -26,13 +26,13 @@ var Game = function(){
 		
 		div.style.left = '450px';
 
-		div.style.fontSize = '45px'
+		div.style.fontSize = '45px';
 
 		div.style.color = '#fff';
 	
 		div.style.width = '500px';
 		
-		div.style.height = '100px'
+		div.style.height = '100px';
 
 		div.innerHTML = 'loading...';
 
@@ -44,7 +44,7 @@ var Game = function(){
 		
 		div2.style.left = '450px';
 
-		div2.style.fontSize = '35px'
+		div2.style.fontSize = '35px';
 		
 		div2.style.color = '#fff';
 		
@@ -55,9 +55,9 @@ var Game = function(){
 	
 
 
-		document.body.style.position = 'relative'
-		document.body.style.left = ( document.body.offsetWidth  - 900 ) / 2 + 'px'
-		document.body.style.top = '20px'
+		document.body.style.position = 'relative';
+		document.body.style.left = ( document.body.offsetWidth  - 900 ) / 2 + 'px';
+		document.body.style.top = '20px';
 		document.body.style.overflow = 'hidden';
 		document.body.style.backgroundColor = '#A0AAB2';
 
@@ -77,16 +77,14 @@ var Game = function(){
 				div.style.left = '96px';
 				div.style.position = 'absolute';
 				div.style.zIndex = 9999;
-				div.innerHTML = '作者blog: <a href="http://www.alloyteam.com/author/svenzeng/" target="_blank">http://www.alloyteam.com/author/svenzeng/</a>'
+				div.innerHTML = '作者blog: <a href="http://www.alloyteam.com/author/svenzeng/" target="_blank">http://www.alloyteam.com/author/svenzeng/</a>';
 				document.body.appendChild( div );
-
 	
 			})
 		
 		});
 
-
-	}
+	};
 
 	return {
 		init: init
@@ -95,32 +93,18 @@ var Game = function(){
 
 }();
 
-
-
 var gameStart = function(){
-	
 		document.body.removeChild( div );
-	
 		document.body.removeChild( div2 );
-	
 		document.body.removeChild( loading );
-			
 		Timer.start();
-	
 		window.player1 = Spirit.getInstance( Config.Spirit.RYU1 );
-	
 		window.player2 = Spirit.getInstance( Config.Spirit.RYU2 );
-	
 		player1.setEnemy( player2 );
-	
 		player2.setEnemy( player1 );
-
 		player1.bloodBar = Blood.leftBar();
-	
 		player2.bloodBar = Blood.rightBar();
-	
 		window.map = Map.init();
-				
 		window.Stage = Stage();
 
 		Spirit.interface( 'Stage', Stage );
@@ -139,7 +123,7 @@ var gameStart = function(){
 
 		player2.enemy.bloodBar.event.listen( 'empty', function(){
 			player2.ai.stop();
-		})
+		});
 
 		var pause = false, lock = false;
 	
@@ -187,7 +171,7 @@ var Blood = function(){
 		img.src = 'images/g/bar.gif';
 		div.appendChild( img );
 
-	}
+	};
 	
 	var reload = function(){
 		
